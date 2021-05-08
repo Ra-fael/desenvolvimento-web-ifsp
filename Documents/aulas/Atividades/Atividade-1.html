@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<htmllang=“pt-br”>
+    <head>
+        <meta charset=“UTF-8”>
+        <title>Resevas Hotel IFSP</title>
+    </head>
+    <body>
+        <h1 align="center">Reservas Hotel IFSP </h1>
+        <form oninput="total.value = (noites.valueAsNumber * 99) + ((convidados.valueAsNumber - 1) * 10)">
+            <label for="">
+                Nome Completo: <input type="text" name="nome" placeholder="Rafael Rodrigues" required
+                                title="Preencha com seu nome completo">
+
+                <br>E-mail: <input type="email" name="email" required
+                                title="Preencha comn seu e-mail">
+                                
+                <br>Confirme o e-mail: <input type="email" name="email" required> 
+                <br>Estado de origem
+                <select>
+                    <option value="">Selecione</option>
+                    <option value="AC">AC - Acre</option>
+                    <option value="AL">AL - Alagoas</option>
+                    <option value="AP">AP - Amapá</option>
+                    <option value="AM">AM - Amazonas</option>
+                    <option value="BA">BA - Bahia</option>
+                    <option value="CE">CE - Ceará</option>
+                    <option value="DF">DF - Distrito Federal</option>
+                    <option value="ES">ES - Espirito Santo</option>
+                    <option value="GO">GO - Goiás</option>
+                    <option value="MA">MA - Maranhão</option>
+                    <option value="MS">MS - Mato Grosso do Sul</option>
+                    <option value="MT">MT - Mato Grosso</option>
+                    <option value="MG">MG - Minas Gerais</option>
+                    <option value="PA">PA - Pará</option>
+                    <option value="PB">PB - Paraíba</option>
+                    <option value="PR">PR - Paraná</option>
+                    <option value="PE">PE - Pernambuco</option>
+                    <option value="PI">PI - Piauí</option>
+                    <option value="RJ">RJ - Rio de Janeiro</option>
+                    <option value="RN">RN - Rio Grande do Norte</option>
+                    <option value="RS">RS - Rio Grande do Sul</option>
+                    <option value="RO">RO - Rondônia</option>
+                    <option value="RR">RR - Roraima</option>
+                    <option value="SC">SC - Santa Catarina</option>
+                    <option value="SP">SP - São Paulo</option>
+                    <option value="SE">SE - Sergipe</option>
+                    <option value="TO">TO - Tocantins</option>
+                </select>
+                <br>Data de chegada: <input type="date" name="date" required>
+                <br>Número de noites (quartos são R$ 99,00 por noite):
+                    <input type="number" name="noites" value="1" min="1" max="30" required> (min 1, max 30)
+
+                <br>Número de noites (adicional por  R$10.00 por noite):
+                    <input type="number" name="convidados" value="1" min="1" max="4" required> (min 1, max 4)
+                
+                <br>Total estimado:
+                    R$<output id="total" name="total">99</output>,00
+                    <br>
+
+                <br>Código promocional:</label>
+                    <input type="text" name="promo" pattern="[A-Za-z0-9]{6}" 
+                     title="Códigos promocionais consistem em 6 dígitos alfanuméricos.">
+                    
+                <br><input type="submit" value="Fazer Reserva" /> 
+
+            </label>
+        </form>
+</html>
